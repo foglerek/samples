@@ -97,10 +97,14 @@ class Insights extends Command {
                 $this->BasicInsights->writeToExcel($excel, $aggregateSheet);
             }
 
+
+            ///////////////////////////////////////////////
+            // Below Classes not included in Sample Code //
+            ///////////////////////////////////////////////
+
             if ( $this->taskEnabled(self::GEOGRAPHIC_DATA) ) {
                 $this->info('Generating Geographic Data ...');
                 $this->LocationInsights->writeToExcel($excel, $aggregateSheet, $coverageSheet);
-
             }
 
             if ( $this->taskEnabled(self::INDUSTRY_DATA) ) {
